@@ -199,7 +199,7 @@ http://localhost:8501
 ## 🌐 Live Demo
 
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-yellow?style=for-the-badge)](YOUR_HUGGINGFACE_LINK)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue?style=for-the-badge&logo=kaggle)](YOUR_KAGGLE_LINK)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/ishamaryam07)
 
 ---
 
@@ -244,9 +244,9 @@ print(f"Prediction: {'Will Leave' if prediction[0]==1 else 'Will Stay'}")
 BS Computer Science — Gomal University, DI Khan
 Specialization: Machine Learning & Deep Learning
 
-[![GitHub](https://img.shields.io/badge/GitHub-ishamaryam-black?style=flat-square&logo=github)](https://github.com/YOUR_USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](YOUR_LINKEDIN)
-[![Kaggle](https://img.shields.io/badge/Kaggle-Profile-blue?style=flat-square&logo=kaggle)](YOUR_KAGGLE)
+[![GitHub](https://img.shields.io/badge/GitHub-ishamaryam-black?style=flat-square&logo=github)](https://github.com/Isha-Maryam)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/isha-maryam/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Profile-blue?style=flat-square&logo=kaggle)](https://www.kaggle.com/ishamaryam07)
 [![Hugging Face](https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square)](YOUR_HF)
 
 ---
