@@ -158,11 +158,11 @@ SHAP Explainability
 
 ## 💡 Key Business Insights
 
-🔴 Employees working OverTime are 3x more likely to quit
-🔴 Sales Representatives have ~40% attrition rate
-🔴 Employees aged 18-25 have the highest flight risk
-🔴 Low Satisfaction Score (< 2.5) strongly predicts attrition
-🔴 Employees with 7+ years and no promotion are high risk
+-🔴 Employees working OverTime are 3x more likely to quit
+-🔴 Sales Representatives have ~40% attrition rate
+-🔴 Employees aged 18-25 have the highest flight risk
+-🔴 Low Satisfaction Score (< 2.5) strongly predicts attrition
+-🔴 Employees with 7+ years and no promotion are high risk
 
 ### HR Recommendations
 - 📌 Flag employees with `WorkLife_Stress_Index > 2` for immediate check-in
