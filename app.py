@@ -325,8 +325,9 @@ st.markdown("""
 # ============================================================
 @st.cache_resource
 def load_model():
-    model = joblib.load('models/xgboost_attrition_model.pkl')
-    with open('models/model_config.json', 'r') as f:
+    path_prefix = "Models" if os.path.exists("Models") else "models"
+    model = joblib.load(os.path.join(path_prefix, 'xgboost_attrition_model.pkl'))
+    with open(os.path.join(path_prefix, 'model_config.json'), 'r') as f:
         config = json.load(f)
     return model, config
 
@@ -335,7 +336,9 @@ try:
     threshold = config['best_threshold']
     feature_names = config['feature_names']
 except Exception as e:
-    st.error(f"⚠️ Model files not found. Please ensure models/ folder exists. Error: {e}")
+    import traceback
+    st.error(f"⚠️ Model files not found. Please ensure 'Models' or 'models' folder exists. Error: {e}")
+    st.code(traceback.format_exc())
     st.stop()
 
 # ============================================================

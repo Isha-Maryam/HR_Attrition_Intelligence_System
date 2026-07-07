@@ -1,3 +1,15 @@
+---
+title: HR Attrition Intelligence System
+emoji: 🧠
+colorFrom: blue
+colorTo: red
+sdk: streamlit
+sdk_version: 1.28.0
+python_version: "3.10"
+app_file: app.py
+pinned: false
+---
+
 # 🧠 HR Attrition Intelligence System
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square&logo=python)
