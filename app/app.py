@@ -1,4 +1,17 @@
 import streamlit as st
+import inspect
+
+# Fallback wrappers for older Streamlit versions compatibility
+_original_container = st.container
+def _custom_container(*args, **kwargs):
+    sig = inspect.signature(_original_container)
+    if "border" in kwargs and "border" not in sig.parameters:
+        kwargs.pop("border")
+    return _original_container(*args, **kwargs)
+st.container = _custom_container
+
+
+
 import pandas as pd
 import numpy as np
 import joblib
@@ -62,7 +75,8 @@ st.markdown("""
     }
 
     /* Dark card container styling for bordered container components */
-    div[data-testid="stBorderedContainer"] {
+    div[data-testid="stBorderedContainer"],
+    div[data-testid="stVerticalBlockBorderWrapper"] {
         background-color: #1E293B !important;
         border: 1px solid #334155 !important;
         border-radius: 12px !important;
@@ -73,16 +87,20 @@ st.markdown("""
     }
     
     /* Thin colored top borders on input cards via child markers */
-    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.personal-card-marker) {
+    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.personal-card-marker),
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(div.personal-card-marker) {
         border-top: 4px solid #3B82F6 !important;
     }
-    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.job-card-marker) {
+    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.job-card-marker),
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(div.job-card-marker) {
         border-top: 4px solid #8B5CF6 !important;
     }
-    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.work-card-marker) {
+    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.work-card-marker),
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(div.work-card-marker) {
         border-top: 4px solid #F97316 !important;
     }
-    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.sat-card-marker) {
+    div[data-testid="stBorderedContainer"]:has(> div[data-testid="stMarkdownContainer"] > div.sat-card-marker),
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(div.sat-card-marker) {
         border-top: 4px solid #10B981 !important;
     }
     
@@ -325,11 +343,8 @@ st.markdown("""
 # ============================================================
 @st.cache_resource
 def load_model():
-    import xgboost as xgb
-    path_prefix = "Models" if os.path.exists("Models") else "models"
-    model = xgb.XGBClassifier()
-    model.load_model(os.path.join(path_prefix, 'xgboost_attrition_model.json'))
-    with open(os.path.join(path_prefix, 'model_config.json'), 'r') as f:
+    model = joblib.load('models/xgboost_attrition_model.pkl')
+    with open('models/model_config.json', 'r') as f:
         config = json.load(f)
     return model, config
 
@@ -338,10 +353,7 @@ try:
     threshold = config['best_threshold']
     feature_names = config['feature_names']
 except Exception as e:
-    import traceback
-    traceback.print_exc()
-    st.error(f"⚠️ Model files not found. Please ensure 'Models' or 'models' folder exists. Error: {e}")
-    st.code(traceback.format_exc())
+    st.error(f"⚠️ Model files not found. Please ensure models/ folder exists. Error: {e}")
     st.stop()
 
 # ============================================================
@@ -877,7 +889,7 @@ elif st.session_state.active_tab == "Results & Insights":
 elif st.session_state.active_tab == "About":
     st.markdown("<h3 style='margin-bottom: 20px;'>About the Intelligence System</h3>", unsafe_allow_html=True)
     
-    col_about_1, col_about_2 = st.columns([1.2, 1])
+    col_about_1, col_about_2 = st.columns([1.8, 1])
     
     with col_about_1:
         with st.container(border=True):
@@ -910,9 +922,7 @@ elif st.session_state.active_tab == "About":
             </div>
             """, unsafe_allow_html=True)
 
-        # 5. Horizontal divider between project info and developer bio
-        st.markdown("<hr style='border: 0; border-top: 1px solid #334155; margin: 24px 0;'>", unsafe_allow_html=True)
-
+    with col_about_2:
         with st.container(border=True):
             st.markdown("#### Developer Profile", unsafe_allow_html=True)
             st.markdown("""
@@ -922,63 +932,6 @@ elif st.session_state.active_tab == "About":
             
             [GitHub](https://github.com/) · [LinkedIn](https://linkedin.com/) · [Kaggle](https://kaggle.com/)
             """)
-
-    with col_about_2:
-        with st.container(border=True):
-            st.markdown("#### Model Performance Table", unsafe_allow_html=True)
-            
-            perf = config.get('performance', {})
-            recall_val = perf.get('recall', 76.6)
-            precision_val = perf.get('precision', 33.03)
-            f1_val = perf.get('f1_score', 46.15)
-            auc_val = perf.get('auc_roc', 76.44)
-            
-            st.markdown(f"""
-            <table style="width: 100%; border-collapse: collapse; text-align: left; background-color: #0F172A; color: white; border-radius: 8px; overflow: hidden; font-size: 13px;">
-                <thead>
-                    <tr style="background-color: #1E293B; border-bottom: 2px solid #334155;">
-                        <th style="padding: 12px 14px; font-weight: 600;">Metric</th>
-                        <th style="padding: 12px 14px; font-weight: 600; text-align: right;">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px 14px; font-weight: 500; color: #E2E8F0;">Recall</td>
-                        <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: #10B981;">{recall_val}%</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px 14px; font-weight: 500; color: #E2E8F0;">Precision</td>
-                        <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: #3B82F6;">{precision_val}%</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px 14px; font-weight: 500; color: #E2E8F0;">F1 Score</td>
-                        <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: #8B5CF6;">{f1_val}%</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #334155;">
-                        <td style="padding: 12px 14px; font-weight: 500; color: #E2E8F0;">AUC-ROC</td>
-                        <td style="padding: 12px 14px; text-align: right; font-weight: 700; color: #F59E0B;">{auc_val}%</td>
-                    </tr>
-                </tbody>
-            </table>
-            """, unsafe_allow_html=True)
-            
-        with st.container(border=True):
-            st.markdown("#### Performance Evaluation Plots", unsafe_allow_html=True)
-            with st.expander("Expand to view Confusion Matrix, ROC curve & Feature Importances"):
-                plots_dir = "plots"
-                plot_files = {
-                    "Confusion Matrix": "confusion_matrix.png",
-                    "ROC Curve": "roc_curve.png",
-                    "Feature Importance": "feature_importance.png",
-                    "Model Summary": "model_summary.png"
-                }
-                for title, fname in plot_files.items():
-                    path = os.path.join("plots", fname)
-                    st.markdown(f"<p style='font-size: 12px; margin-top: 8px; margin-bottom: 2px; font-weight: 600;'>{title}</p>", unsafe_allow_html=True)
-                    if os.path.exists(path):
-                        st.image(path, use_container_width=True)
-                    else:
-                        st.warning(f"Plot not found: {fname}")
 
 # ============================================================
 # FOOTER WITH GRADIENT DIVIDER
