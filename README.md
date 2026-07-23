@@ -19,7 +19,7 @@ An advanced AI-powered decision support system designed to assist Human Resource
 
 ---
 
-## 📌 Table of Contents
+<!-- ## 📌 Table of Contents
 - [📊 Business Challenge & Objective](#-business-challenge--objective)
 - [⚙️ System Architecture](#️-system-architecture)
 - [🚀 Key Features](#-key-features)
@@ -29,7 +29,7 @@ An advanced AI-powered decision support system designed to assist Human Resource
 - [💻 Installation & Local Setup](#-installation--local-setup)
 - [🌐 Hugging Face Spaces Deployment](#-hugging-face-spaces-deployment)
 - [👩‍💻 Developer Profile](#-developer-profile)
-- [📜 License](#-license)
+- [📜 License](#-license) -->
 
 ---
 
@@ -221,7 +221,7 @@ To deploy your own copy:
       <p><b>BS Computer Science(Final Year)</b> — Gomal University</p>
       <p><i>ML/DL Engineer</i></p>
       <p>
-        <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+        <a href="https://github.com/"><img src="" alt="GitHub"/></a>
         <a href="https://linkedin.com/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
         <a href="https://kaggle.com/"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white" alt="Kaggle"/></a>
       </p>
