@@ -211,7 +211,7 @@ To deploy your own copy:
 
 ## 👩‍💻 Developer Profile
 
-<table align="right" style="border: none;">
+<table align="center" style="border: none;">
   <tr>
     <!-- <td align="center" width="150">
     </td> -->
