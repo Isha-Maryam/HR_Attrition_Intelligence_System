@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://github.com/Isha-Maryam/HR_Attrition_Intelligence_System"><img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"/></a>
+  <a href="https://streamlit.io/"><img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit"/></a>
+  <a href="https://xgboost.ai/"><img src="https://img.shields.io/badge/XGBoost-2.0+-FF6F00?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost"/></a>
+  <img src="https://img.shields.io/badge/AUC--ROC-76.44%25-green?style=for-the-badge" alt="AUC-ROC"/>
+  <img src="https://img.shields.io/badge/Recall-76.60%25-green?style=for-the-badge" alt="Recall"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
+</p>
+
+ **Live Demo:** [Try it on Hugging Face Spaces](https://huggingface.co/spaces/isha-maryam/Hr_Attrition_Intelligence_System)
+ 
 # 🎯 HR Attrition Intelligence System
 
 An advanced AI-powered decision support system designed to assist Human Resources professionals in proactively identifying, analyzing, and managing employee turnover risks. Built with **Streamlit** and powered by a fine-tuned **XGBoost Classifier** on the IBM Watson HR Analytics dataset.
@@ -8,14 +19,7 @@ An advanced AI-powered decision support system designed to assist Human Resource
   <img src="plots/business_dashboard.png" alt="HR Attrition Business Dashboard" width="850" style="border-radius: 8px; border: 1px solid #334155; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);"/>
 </p> -->
 
-<p align="center">
-  <a href="https://github.com/Isha-Maryam/HR_Attrition_Intelligence_System"><img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"/></a>
-  <a href="https://streamlit.io/"><img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="Streamlit"/></a>
-  <a href="https://xgboost.ai/"><img src="https://img.shields.io/badge/XGBoost-2.0+-FF6F00?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost"/></a>
-  <img src="https://img.shields.io/badge/AUC--ROC-76.44%25-green?style=for-the-badge" alt="AUC-ROC"/>
-  <img src="https://img.shields.io/badge/Recall-76.60%25-green?style=for-the-badge" alt="Recall"/>
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
-</p>
+
 
 <!-- --- -->
 <!-- 
