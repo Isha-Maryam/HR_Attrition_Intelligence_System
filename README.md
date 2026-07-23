@@ -1,14 +1,3 @@
----
-title: HR Attrition Intelligence System
-emoji: 🎯
-colorFrom: blue
-colorTo: indigo
-sdk: streamlit
-sdk_version: 1.35.0
-app_file: app.py
-pinned: false
----
-
 # 🎯 HR Attrition Intelligence System
 
 An advanced AI-powered decision support system designed to assist Human Resources professionals in proactively identifying, analyzing, and managing employee turnover risks. Built with **Streamlit** and powered by a fine-tuned **XGBoost Classifier** on the IBM Watson HR Analytics dataset.
