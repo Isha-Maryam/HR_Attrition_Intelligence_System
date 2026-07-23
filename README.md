@@ -10,7 +10,9 @@
 # 🎯 HR Attrition Intelligence System
 
 An advanced AI-powered decision support system designed to assist Human Resources professionals in proactively identifying, analyzing, and managing employee turnover risks. Built with **Streamlit** and powered by a fine-tuned **XGBoost Classifier** on the IBM Watson HR Analytics dataset.
- [![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/isha-maryam/Hr_Attrition_Intelligence_System)
+
+[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/isha-maryam/Hr_Attrition_Intelligence_System)
+
 ---
 
 <!-- <p align="center">
