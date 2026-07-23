@@ -17,7 +17,7 @@ An advanced AI-powered decision support system designed to assist Human Resource
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
 </p>
 
----
+<!-- --- -->
 <!-- 
 ## 📌 Table of Contents
 - [📊 Business Challenge & Objective](#-business-challenge--objective)
@@ -31,7 +31,7 @@ An advanced AI-powered decision support system designed to assist Human Resource
 - [👩‍💻 Developer Profile](#-developer-profile)
 - [📜 License](#-license) -->
 
----
+<!-- --- -->
 
 ## 📊 Business Challenge & Objective
 
@@ -213,8 +213,8 @@ To deploy your own copy:
 
 <table align="center" style="border: none;">
   <tr>
-    <td align="center" width="150">
-    </td>
+    <!-- <td align="center" width="150">
+    </td> -->
     <td>
       <h3>Isha Maryam</h3>
       <p><b>BS Computer Science(Final Year)</b> — Gomal University</p>
