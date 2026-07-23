@@ -4,9 +4,9 @@ An advanced AI-powered decision support system designed to assist Human Resource
 
 ---
 
-<p align="center">
+<!-- <p align="center">
   <img src="plots/business_dashboard.png" alt="HR Attrition Business Dashboard" width="850" style="border-radius: 8px; border: 1px solid #334155; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);"/>
-</p>
+</p> -->
 
 <p align="center">
   <a href="https://github.com/Isha-Maryam/HR_Attrition_Intelligence_System"><img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Version"/></a>
@@ -81,15 +81,15 @@ graph TD
 
 ## 🚀 Key Features
 
-*   **🔮 Employee Risk Estimation:** Evaluates attrition probability using a fine-tuned XGBoost model tuned via GridSearchCV. Displays results inside an animated, color-coded interactive radial gauge chart.
-*   **🔍 Root Cause Diagnosis:** Dynamically extracts the specific personal and career factors contributing to an employee's high risk score (e.g., promotion lags, low job involvement, extreme work-life stress).
-*   **📋 Prescriptive Action Plans:** Generates bespoke intervention strategies mapped directly to the active root causes, calculating a projected **"Retention Boost"** metric should actions be executed.
-*   **🎨 Premium Dark UI:** Features a high-fidelity, customized CSS dark mode configuration equipped with fade-ins, stagger animations, and pulsing micro-interactions for a premium software experience.
-*   **📊 Comprehensive Analytical Dashboards:** Out-of-the-box analytical plots demonstrating overall performance, correlation heatmaps, feature importance, and general model evaluations.
+*   ** Employee Risk Estimation:** Evaluates attrition probability using a fine-tuned XGBoost model tuned via GridSearchCV. Displays results inside an animated, color-coded interactive radial gauge chart.
+*   ** Root Cause Diagnosis:** Dynamically extracts the specific personal and career factors contributing to an employee's high risk score (e.g., promotion lags, low job involvement, extreme work-life stress).
+*   ** Prescriptive Action Plans:** Generates bespoke intervention strategies mapped directly to the active root causes, calculating a projected **"Retention Boost"** metric should actions be executed.
+*   ** Premium Dark UI:** Features a high-fidelity, customized CSS dark mode configuration equipped with fade-ins, stagger animations, and pulsing micro-interactions for a premium software experience.
+*   ** Comprehensive Analytical Dashboards:** Out-of-the-box analytical plots demonstrating overall performance, correlation heatmaps, feature importance, and general model evaluations.
 
 ---
 
-## 🧪 Machine Learning Pipeline & Performance
+##  Machine Learning Pipeline & Performance
 
 The classifier is built on top of an optimized **XGBoost Classifier** model pipeline. Optimization was performed via rigorous hyperparameter searching (`GridSearchCV`) to maximize structural sensitivity (`Recall`) without incurring excessive false alarms.
 
@@ -214,12 +214,12 @@ To deploy your own copy:
 <table align="center" style="border: none;">
   <tr>
     <td align="center" width="150">
-      <img src="https://img.icons8.com/bubbles/100/000000/user-female.png" alt="Developer Avatar" width="100"/>
+      <img src="https://www.google.com/imgres?q=professional%20girl%20avator&imgurl=https%3A%2F%2Fimg.magnific.com%2Fpremium-vector%2Fvector-image-business-woman-shirt-suit_1213699-3051.jpg%3Fsemt%3Dais_hybrid%26w%3D740%26q%3D80&imgrefurl=https%3A%2F%2Fwww.magnific.com%2Ffree-photos-vectors%2Fprofessional-female-avatar&docid=op96yM3naqx-HM&tbnid=cEXGRnJ_YlenKM&vet=12ahUKEwilw8zz4OiVAxWvgf0HHVdSEtkQnPAOegQIQRAA..i&w=740&h=740&hcb=2&ved=2ahUKEwilw8zz4OiVAxWvgf0HHVdSEtkQnPAOegQIQRAA" alt="Developer Avatar" width="100"/>
     </td>
     <td>
       <h3>Isha Maryam</h3>
-      <p><b>BS Computer Science</b> — Gomal University</p>
-      <p><i>Specialization: Machine Learning, Predictive Modeling & Interactive Dashboards</i></p>
+      <p><b>BS Computer Science(Final Year)</b> — Gomal University</p>
+      <p><i>ML/DL Engineer</i></p>
       <p>
         <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
         <a href="https://linkedin.com/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
